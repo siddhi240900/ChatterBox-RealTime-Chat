@@ -37,13 +37,88 @@ JavaScript
 Fetch API
 
 📂 Project Structure
-ChatterBox/
+CHATTERBOX/
 │
 ├── backend/
+│   ├── app/
+│   │   ├── admin/
+│   │   │   ├── __init__.py
+│   │   │   └── admin_routes.py
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── __init__.py
+│   │   │   ├── auth.py
+│   │   │   └── jwt.py
+│   │   │
+│   │   ├── chat/
+│   │   │   ├── __init__.py
+│   │   │   ├── chat_history.py
+│   │   │   ├── messages.py
+│   │   │   └── websocket.py
+│   │   │
+│   │   ├── ml/
+│   │   │   ├── __init__.py
+│   │   │   └── bad_word_model.py
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── __init__.py
+│   │   │   ├── security.py
+│   │   │   └── time.py
+│   │   │
+│   │   ├── __init__.py
+│   │   ├── database.py
+│   │   ├── main.py
+│   │   ├── models.py
+│   │   └── schemas.py
+│   │
+│   ├── __init__.py
+│   ├── requirements.txt
+│   └── run.py
+│
 ├── frontend/
-├── README.md
+│   ├── admin/
+│   │   ├── admin_dashboard.html
+│   │   └── admin_login.html
+│   │
+│   ├── assets/
+│   │   └── bg.svg
+│   │
+│   ├── css/
+│   │   ├── admin.css
+│   │   ├── chat.css
+│   │   ├── main.css
+│   │   └── styles.css
+│   │
+│   ├── js/
+│   │   ├── admin.js
+│   │   ├── auth.js
+│   │   ├── chat.js
+│   │   └── config.js
+│   │
+│   ├── public/
+│   │   └── vite.svg
+│   │
+│   ├── src/
+│   │   ├── counter.js
+│   │   ├── javascript.svg
+│   │   ├── main.js
+│   │   └── style.css
+│   │
+│   ├── .gitignore
+│   ├── chat.html
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   └── register.html
+│
+├── setup/
+│   └── requirements.txt
+│
+├── .gitignore
+├── LICENSE
 ├── PROJECT_DOCUMENTATION.md
-└── LICENSE
+└── README.md
+
 
 ⚙️ Installation Guide
 🔹 1. Clone the Repository
