@@ -1,10 +1,10 @@
 ChatterBox – Real-Time WebSocket Chat Application
 Full Project Documentation
-
+```
 Author: Siddhi Kumari
 Project Type: Full Stack Web Application
 Technologies Used: FastAPI, WebSockets, SQLite, JWT, HTML, CSS, JavaScript
-
+```
 1. Introduction
 
 1.1 Project Overview
