@@ -122,6 +122,7 @@ CHATTERBOX/
 ```
 
 ⚙️ Installation Guide
+
 🔹 1. Clone the Repository
 git clone https://github.com/siddhi240900/ChatterBox-RealTime-Chat.git
 cd ChatterBox-RealTime-Chat
