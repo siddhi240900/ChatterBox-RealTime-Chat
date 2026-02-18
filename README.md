@@ -37,6 +37,7 @@ JavaScript
 Fetch API
 
 📂 Project Structure
+```
 CHATTERBOX/
 │
 ├── backend/
@@ -118,7 +119,7 @@ CHATTERBOX/
 ├── LICENSE
 ├── PROJECT_DOCUMENTATION.md
 └── README.md
-
+```
 
 ⚙️ Installation Guide
 🔹 1. Clone the Repository
