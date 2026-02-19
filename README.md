@@ -1,42 +1,48 @@
-🚀 ChatterBox – Real-Time WebSocket Chat Application
+# 🚀 ChatterBox – Real-Time WebSocket Chat Application  
 
-📌 Overview
+## 📌 Overview  
 
-ChatterBox is a full-stack real-time chat application built using FastAPI and WebSockets.
+**ChatterBox** is a full-stack real-time chat application built using FastAPI and WebSockets.  
 It supports secure authentication, instant messaging, automated moderation, and an admin monitoring dashboard.
 
 This project demonstrates modern backend architecture, JWT-based authentication, and real-time communication handling.
 
-✨ Features
+---
 
-🔐 User Registration & Login
-🎫 JWT-based Authentication
-👤 Role-based Access (Admin & User)
-💬 Real-Time Chat using WebSockets
-🛡️ Automated Bad Word Detection
-⚠️ Warning & Auto-Block System
-📊 Admin Dashboard
-📥 CSV Report Download
-🗄️ SQLite Database Integration
-🛠️ Tech Stack
+## ✨ Features  
 
-🔹 Backend
+- 🔐 User Registration & Login  
+- 🎫 JWT-based Authentication  
+- 👤 Role-based Access (Admin & User)  
+- 💬 Real-Time Chat using WebSockets  
+- 🛡️ Automated Bad Word Detection  
+- ⚠️ Warning & Auto-Block System  
+- 📊 Admin Dashboard  
+- 📥 CSV Report Download  
+- 🗄️ SQLite Database Integration  
 
-FastAPI
-SQLAlchemy
-SQLite
-Python-Jose (JWT)
-Passlib (bcrypt)
-WebSockets
+---
 
-🔹 Frontend
+## 🛠️ Tech Stack  
 
-HTML5
-CSS3
-JavaScript
-Fetch API
+### 🔹 Backend  
+- FastAPI  
+- SQLAlchemy  
+- SQLite  
+- Python-Jose (JWT)  
+- Passlib (bcrypt)  
+- WebSockets  
 
-📂 Project Structure
+### 🔹 Frontend  
+- HTML5  
+- CSS3  
+- JavaScript  
+- Fetch API  
+
+---
+
+## 📂 Project Structure  
+
 ```
 CHATTERBOX/
 │
@@ -66,108 +72,99 @@ CHATTERBOX/
 │   │   │   ├── security.py
 │   │   │   └── time.py
 │   │   │
-│   │   ├── __init__.py
 │   │   ├── database.py
 │   │   ├── main.py
 │   │   ├── models.py
 │   │   └── schemas.py
 │   │
-│   ├── __init__.py
 │   ├── requirements.txt
 │   └── run.py
 │
 ├── frontend/
 │   ├── admin/
-│   │   ├── admin_dashboard.html
-│   │   └── admin_login.html
-│   │
 │   ├── assets/
-│   │   └── bg.svg
-│   │
 │   ├── css/
-│   │   ├── admin.css
-│   │   ├── chat.css
-│   │   ├── main.css
-│   │   └── styles.css
-│   │
 │   ├── js/
-│   │   ├── admin.js
-│   │   ├── auth.js
-│   │   ├── chat.js
-│   │   └── config.js
-│   │
-│   ├── public/
-│   │   └── vite.svg
-│   │
-│   ├── src/
-│   │   ├── counter.js
-│   │   ├── javascript.svg
-│   │   ├── main.js
-│   │   └── style.css
-│   │
-│   ├── .gitignore
 │   ├── chat.html
 │   ├── index.html
-│   ├── package-lock.json
-│   ├── package.json
 │   └── register.html
 │
-├── setup/
-│   └── requirements.txt
-│
-├── .gitignore
 ├── LICENSE
 ├── PROJECT_DOCUMENTATION.md
 └── README.md
 ```
 
-⚙️ Installation Guide
+---
 
-🔹 1. Clone the Repository
+## ⚙️ Installation Guide  
+
+### 🔹 1️⃣ Clone the Repository  
+
+```bash
 git clone https://github.com/siddhi240900/ChatterBox-RealTime-Chat.git
 cd ChatterBox-RealTime-Chat
+```
 
-🔹 2. Backend Setup
+---
+
+### 🔹 2️⃣ Backend Setup  
+
+```bash
 cd backend
 python -m venv venv
 pip install -r requirements.txt
 python run.py
+```
 
+Backend will run at:  
 
-Backend will run at:
-
+```
 http://127.0.0.1:8000
+```
 
-🔹 3. Frontend Setup
+---
+
+### 🔹 3️⃣ Frontend Setup  
+
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
-🔐 Admin Features
+---
 
-Admin users can:
+## 🔐 Admin Features  
 
-View all registered users
-Monitor chat messages
-View blocked users
-Download reports in CSV format
+Admin users can:  
 
-🛡️ Security Implementation
+- View all registered users  
+- Monitor chat messages  
+- View blocked users  
+- Download reports in CSV format  
 
-Password hashing using bcrypt
-JWT token authentication
-Role-based route protection
-Auto-block moderation system
+---
 
-📈 Future Improvements
+## 🛡️ Security Implementation  
 
-Group chat functionality
-Private messaging
-PostgreSQL integration
-Docker containerization
-Cloud deployment
-AI-powered moderation
+- Password hashing using bcrypt  
+- JWT token authentication  
+- Role-based route protection  
+- Auto-block moderation system  
 
-📜 License
+---
+
+## 📈 Future Improvements  
+
+- Group chat functionality  
+- Private messaging  
+- PostgreSQL integration  
+- Docker containerization  
+- Cloud deployment  
+- AI-powered moderation  
+
+---
+
+## 📜 License  
 
 This project is licensed under the MIT License.
