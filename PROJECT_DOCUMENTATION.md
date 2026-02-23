@@ -1,219 +1,215 @@
-============================================================
-                     CHATTERBOX – REAL-TIME WEBSOCKET CHAT APPLICATION
-                         FULL PROJECT DOCUMENTATION
-============================================================
+# CHATTERBOX – Real-Time WebSocket Chat Application  
+## Full Project Documentation  
 
-**Author:** Siddhi Kumari
-**Project Type:** Full Stack Web Application
-**Technologies Used:** FastAPI, WebSockets, SQLite, JWT, HTML, CSS, JavaScript
+**Author:** Siddhi Kumari  
+**Project Type:** Full Stack Web Application  
+**Technologies Used:** FastAPI, WebSockets, SQLite, JWT, HTML, CSS, JavaScript  
 
-============================================================
-1. INTRODUCTION
-============================================================
+---
 
-1.1 Project Overview
--------------------
-ChatterBox is a full-stack real-time chat application developed using FastAPI and WebSockets. 
-The system enables secure user registration and login, real-time messaging, automated moderation, 
-and an admin monitoring dashboard.
+## 1. Introduction
+
+### 1.1 Project Overview
+
+ChatterBox is a full-stack real-time chat application developed using FastAPI and WebSockets. The system enables secure user registration and login, real-time messaging, automated moderation, and an admin monitoring dashboard.
 
 The platform demonstrates modern backend architecture, secure authentication using JWT, and real-time communication handling.
 
-1.2 Objectives
---------------
-The objectives of this project are:
-    - To implement real-time communication using WebSockets
-    - To design secure JWT-based authentication
-    - To implement role-based access control
-    - To create an admin monitoring system
-    - To build automated moderation for chat messages
-    - To manage data efficiently using SQLite
+### 1.2 Objectives
 
-============================================================
-2. SYSTEM ARCHITECTURE
-============================================================
+- Implement real-time communication using WebSockets  
+- Design secure JWT-based authentication  
+- Implement role-based access control  
+- Create an admin monitoring system  
+- Build automated moderation for chat messages  
+- Manage data efficiently using SQLite  
+
+---
+
+## 2. System Architecture
+
 The application follows a client-server architecture.
 
 Frontend (HTML/CSS/JavaScript) communicates with the FastAPI backend using:
-    - REST APIs (for authentication & admin)
-    - WebSockets (for real-time messaging)
+
+- REST APIs (authentication & admin)
+- WebSockets (real-time messaging)
 
 The backend interacts with an SQLite database to store users and messages.
 
-============================================================
-3. TECHNOLOGY STACK
-============================================================
+---
 
-**Backend:**
-    - FastAPI
-    - SQLAlchemy
-    - SQLite
-    - Python-Jose (JWT handling)
-    - Passlib (Password hashing)
-    - WebSockets
+## 3. Technology Stack
 
-**Frontend:**
-    - HTML5
-    - CSS3
-    - JavaScript
-    - Fetch API
+### Backend
+- FastAPI  
+- SQLAlchemy  
+- SQLite  
+- Python-Jose (JWT handling)  
+- Passlib (Password hashing)  
+- WebSockets  
 
-============================================================
-4. FUNCTIONAL MODULES
-============================================================
+### Frontend
+- HTML5  
+- CSS3  
+- JavaScript  
+- Fetch API  
 
-4.1 Authentication Module
--------------------------
-**Features:**
-    - User Registration
-    - User Login
-    - JWT Token Generation
-    - Role-based Authorization
-    - Blocked User Detection
+---
 
-**Security Measures:**
-    - Passwords hashed using bcrypt
-    - JWT tokens with expiration
-    - Protected API routes
-    - Admin-only endpoints
+## 4. Functional Modules
 
-4.2 Real-Time Chat Module
--------------------------
-**Features:**
-    - WebSocket-based messaging
-    - Instant message broadcasting
-    - Persistent message storage
-    - Timestamp tracking
+### 4.1 Authentication Module
 
-**Workflow:**
-    1. User logs in
-    2. WebSocket connection established
-    3. Message sent to server
-    4. Message validated and stored
-    5. Broadcast to other connected users
+**Features**
+- User Registration  
+- User Login  
+- JWT Token Generation  
+- Role-based Authorization  
+- Blocked User Detection  
 
-4.3 Moderation System
----------------------
-**Purpose:** To maintain safe communication.
+**Security Measures**
+- Password hashing using bcrypt  
+- JWT tokens with expiration  
+- Protected API routes  
+- Admin-only endpoints  
 
-**Implementation:** Messages checked for inappropriate words; Warning system implemented
+---
 
-**Violation Handling:**
-    - 1st violation → Warning
-    - 2nd violation → Warning
-    - 3rd violation → User automatically blocked
+### 4.2 Real-Time Chat Module
 
-**Blocked users cannot:**
-    - Log in
-    - Send messages
-    - Access chat system
+**Features**
+- WebSocket-based messaging  
+- Instant message broadcasting  
+- Persistent message storage  
+- Timestamp tracking  
 
-4.4 Admin Module
-----------------
-**Admin Capabilities:**
-    - View all users
-    - View blocked users
-    - Monitor messages
-    - Download reports (CSV)
+**Workflow**
+1. User logs in  
+2. WebSocket connection established  
+3. Message sent to server  
+4. Message validated and stored  
+5. Broadcast to other connected users  
 
-Admin routes are protected using role-based JWT verification.
+---
 
-============================================================
-5. DATABASE DESIGN
-============================================================
+### 4.3 Moderation System
 
-**Users Table:**
-    - id (Primary Key)
-    - username
-    - email
-    - password_hash
-    - is_admin
-    - is_blocked
-    - warning_count
-    - created_at
+**Purpose:** Maintain safe communication.
 
-**Messages Table:**
-    - id (Primary Key)
-    - sender_id
-    - content
-    - timestamp
+**Violation Handling**
+- 1st violation → Warning  
+- 2nd violation → Warning  
+- 3rd violation → User automatically blocked  
 
-============================================================
-6. API ENDPOINTS
-============================================================
+Blocked users cannot:
+- Log in  
+- Send messages  
+- Access chat system  
 
-**Authentication:**
-    - POST /register
-    - POST /login
+---
 
-**Chat:**
-    - WebSocket /ws
+### 4.4 Admin Module
 
-**Admin:**
-    - GET /admin/users
-    - GET /admin/messages
-    - GET /admin/download/users
-    - GET /admin/download/messages
+**Admin Capabilities**
+- View all users  
+- View blocked users  
+- Monitor messages  
+- Download reports (CSV)  
 
-============================================================
-7. SECURITY IMPLEMENTATION
-============================================================
-    - Password hashing using bcrypt
-    - JWT-based authentication
-    - Role-based route protection
-    - Auto-block moderation system
+---
 
-============================================================
-8. TESTING
-============================================================
+## 5. Database Design
+
+### Users Table
+- id (Primary Key)  
+- username  
+- email  
+- password_hash  
+- is_admin  
+- is_blocked  
+- warning_count  
+- created_at  
+
+### Messages Table
+- id (Primary Key)  
+- sender_id  
+- content  
+- timestamp  
+
+---
+
+## 6. API Endpoints
+
+### Authentication
+- POST `/register`
+- POST `/login`
+
+### Chat
+- WebSocket `/ws`
+
+### Admin
+- GET `/admin/users`
+- GET `/admin/messages`
+- GET `/admin/download/users`
+- GET `/admin/download/messages`
+
+---
+
+## 7. Security Implementation
+
+- Password hashing using bcrypt  
+- JWT-based authentication  
+- Role-based route protection  
+- Auto-block moderation system  
+
+---
+
+## 8. Testing
+
 The system was manually tested for:
 
-• User registration  
-• Login validation  
-• Role-based access control  
-• Real-time chat functionality  
-• Warning logic  
-• Auto-block functionality  
-• Admin report download  
+- User registration  
+- Login validation  
+- Role-based access control  
+- Real-time chat functionality  
+- Warning logic  
+- Auto-block functionality  
+- Admin report download  
 
 All modules were verified for expected behavior.
 
-------------------------------------------------------------
+---
 
-============================================================
-9. LIMITATIONS
-============================================================
-    - SQLite not suitable for high-scale production
-    - No cloud deployment yet
-    - No group chat feature
-    - Limited UI enhancements
+## 9. Limitations
 
-============================================================
-10. FUTURE ENHANCEMENTS
-============================================================
-    - Group chat rooms
-    - Private messaging
-    - PostgreSQL integration
-    - Docker containerization
-    - Cloud deployment
-    - AI-based content moderation
-    - File and image sharing
+- SQLite not suitable for high-scale production  
+- No cloud deployment yet  
+- No group chat feature  
+- Limited UI enhancements  
 
-============================================================
-11. CONCLUSION
-============================================================
+---
+
+## 10. Future Enhancements
+
+- Group chat rooms  
+- Private messaging  
+- PostgreSQL integration  
+- Docker containerization  
+- Cloud deployment  
+- AI-based content moderation  
+- File and image sharing  
+
+---
+
+## 11. Conclusion
+
 ChatterBox successfully demonstrates:
-    - Real-time WebSocket communication
-    - Secure JWT authentication
-    - Role-based access control
-    - Automated moderation system
-    - Admin monitoring dashboard
 
-• Real-time WebSocket communication  
-• Secure JWT authentication  
-• Role-based access control  
-• Automated moderation system  
-• Admin monitoring dashboard  
+- Real-time WebSocket communication  
+- Secure JWT authentication  
+- Role-based access control  
+- Automated moderation system  
+- Admin monitoring dashboard  
 
 The project reflects a strong understanding of backend architecture, authentication mechanisms, and real-time system development.
-The project reflects strong understanding of backend architecture, authentication mechanisms, and real-time system development.
