@@ -180,38 +180,6 @@ All modules were verified for expected behavior.
 
 ------------------------------------------------------------
 
-9. LIMITATIONS  
-
-• SQLite is not suitable for high-scale production  
-• No cloud deployment implemented  
-• No group chat feature  
-• Limited UI enhancements  
-
-------------------------------------------------------------
-
-10. FUTURE ENHANCEMENTS  
-
-• Group chat rooms  
-• Private messaging  
-• PostgreSQL integration  
-• Docker containerization  
-• Cloud deployment  
-• AI-based content moderation  
-• File and image sharing  
-
-------------------------------------------------------------
-
-11. CONCLUSION  
-    - User registration
-    - Login validation
-    - Role-based access
-    - Real-time chat functionality
-    - Warning logic
-    - Auto-block functionality
-    - Admin report download
-
-All modules were verified for expected behavior.
-
 ============================================================
 9. LIMITATIONS
 ============================================================
